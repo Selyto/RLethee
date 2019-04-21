@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="tst" thread-count="1">
+<listeners>
+        <listener class-name="xBrain.TestListener"/>
+    </listeners>
+<parameter name="test" value="demo"/>
+<test name="TestFramework">
+<classes>
+<class name="testCases.Test001"></class>
+</classes>
+</test>
+</suite>
