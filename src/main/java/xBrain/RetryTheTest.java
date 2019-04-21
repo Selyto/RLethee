@@ -5,16 +5,18 @@ import org.testng.ITestResult;
 
 public class RetryTheTest implements IRetryAnalyzer {
 
-	Foundation fd = new Foundation();
+	XController fd = new XController();
 	int counter = 0;
 	int rLimit = fd.getRetryCount();
 	@Override
 	public boolean retry(ITestResult result) {
-		if(counter < rLimit)
+		if(counter < fd.getRetryCount())
 		 {
 		 counter++;
 		 return true;
 		 }
+		System.out.println(rLimit);
+		System.out.println(counter);
 		 return false;
 	}
 
