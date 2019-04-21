@@ -7,9 +7,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import utils.Locators;
+import xBrain.SeleniumActions;
 import xBrain.XController;
 
-public class Homepage extends XController {
+public class Homepage extends SeleniumActions {
 
     String id="hplogo";
 	

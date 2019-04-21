@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-tst">
-              <span class="suite-name border-failed">tst</span>
+              <span class="suite-name border-passed">tst</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,45 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,  3 skipped,  </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-tst" class="hide-methods failed suite-tst"> (hide)</a> <!-- hide-methods failed suite-tst -->
-                      <a href="#" panel-name="suite-tst" class="show-methods failed suite-tst"> (show)</a> <!-- show-methods failed suite-tst -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-tst" class="hide-methods passed suite-tst"> (hide)</a> <!-- hide-methods passed suite-tst -->
+                      <a href="#" panel-name="suite-tst" class="show-methods passed suite-tst"> (show)</a> <!-- show-methods passed suite-tst -->
                     </span>
-                    <div class="method-list-content failed suite-tst">
+                    <div class="method-list-content passed suite-tst">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-tst" title="testCases.Test001" hash-for-method="testMe">testMe</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-tst -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-tst" class="hide-methods skipped suite-tst"> (hide)</a> <!-- hide-methods skipped suite-tst -->
-                      <a href="#" panel-name="suite-tst" class="show-methods skipped suite-tst"> (show)</a> <!-- show-methods skipped suite-tst -->
-                    </span>
-                    <div class="method-list-content skipped suite-tst">
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-tst" title="testCases.Test001" hash-for-method="testMe">testMe</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-tst" title="testCases.Test001" hash-for-method="testMe">testMe</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-tst" title="testCases.Test001" hash-for-method="testMe">testMe</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-tst -->
+                    </div> <!-- method-list-content passed suite-tst -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -141,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-tst" class="panel tst">
-          <div class="suite-tst-class-failed">
+          <div class="suite-tst-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">testCases.Test001</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -152,84 +128,10 @@
                   <a name="testMe">
                   </a> <!-- testMe -->
                   <span class="method-name">testMe</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Failed to decode response from marionette
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-JGUOOTD&apos;, ip: &apos;192.168.1.7&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: driver.version: FirefoxDriver
-remote stacktrace: 
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-	at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-	at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
-	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
-	at xBrain.XController.openBrowser(XController.java:143)
-	at xBrain.XController.onTestStart(XController.java:57)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-tst-class-failed -->
-          <div class="suite-tst-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">testCases.Test001</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testMe">
-                  </a> <!-- testMe -->
-                  <span class="method-name">testMe</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at objectRepository.Homepage.getTitle(Homepage.java:14)
-	at testCases.Test001.testMe(Test001.java:14)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testMe">
-                  </a> <!-- testMe -->
-                  <span class="method-name">testMe</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at objectRepository.Homepage.getTitle(Homepage.java:14)
-	at testCases.Test001.testMe(Test001.java:14)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testMe">
-                  </a> <!-- testMe -->
-                  <span class="method-name">testMe</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at objectRepository.Homepage.getTitle(Homepage.java:14)
-	at testCases.Test001.testMe(Test001.java:14)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-tst-class-skipped -->
+          </div> <!-- suite-tst-class-passed -->
         </div> <!-- panel tst -->
         <div panel-name="test-xml-tst" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -286,28 +188,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testMe')
 data.setCell(0, 2, 'testCases.Test001')
-data.setCell(0, 3, 89238);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testMe')
-data.setCell(1, 2, 'testCases.Test001')
-data.setCell(1, 3, 15931);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testMe')
-data.setCell(2, 2, 'testCases.Test001')
-data.setCell(2, 3, 15881);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testMe')
-data.setCell(3, 2, 'testCases.Test001')
-data.setCell(3, 3, 7396);
+data.setCell(0, 3, 13145);
 window.suiteTableData['tst']= { tableData: data, tableDiv: 'times-div-tst'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-tst">
               </div> <!-- times-div-tst -->
             </div> <!-- times-div -->
@@ -337,14 +227,6 @@ return data;
               <div class="test-method">
                 <span class="method-name">testMe</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testMe</span>
-                <span class="method-start">89277 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testMe</span>
-                <span class="method-start">96675 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
