@@ -54,28 +54,28 @@ public class XController implements ITestListener, IAnnotationTransformer{
 	@Override
 	public void onTestStart(ITestResult result) {
 		logger = extent.createTest(result.getName());
-		//openBrowser();
-		//navigateandGoto();
-		System.out.println("got in");
+		openBrowser();
+		navigateandGoto();
+		
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
 		logger.log(Status.PASS, MarkupHelper.createLabel(result.getName()+" Test Case PASSED", ExtentColor.GREEN));
-		System.out.println("PASS");
+		
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
 		logger.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+" Test Case Failed", ExtentColor.RED));
-		/* try {
+		 try {
 			 logger.fail("Sanpshot: " + logger.addScreenCaptureFromPath(getScreenShot(Browser(), result.getName())));
 			
 		} catch (IOException e) {
 			e.printStackTrace();
-		}*/
+		}
 		 System.out.println("FAIL");
 	}
 
@@ -94,14 +94,12 @@ public class XController implements ITestListener, IAnnotationTransformer{
 	public void onStart(ITestContext context) {
 		readConfig();
 		startReport();
-		System.out.println("Engine initiated");
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
-		//killAll();
+		killAll();
 		extent.flush();
-		System.out.println("All over");
 	}
 
 	@Override
@@ -171,7 +169,6 @@ public class XController implements ITestListener, IAnnotationTransformer{
 				USERNAME = prop.getProperty("username");
 				PASSWORD = prop.getProperty("password");
 				RETRYCOUNT = Integer.parseInt(prop.getProperty("retryCount"));
-				System.out.println(RETRYCOUNT);
 			} catch (FileNotFoundException e) {
 				System.out.println("Configuraton Read Error.");
 			} catch (IOException e) {

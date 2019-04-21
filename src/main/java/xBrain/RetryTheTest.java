@@ -15,8 +15,6 @@ public class RetryTheTest implements IRetryAnalyzer {
 		 counter++;
 		 return true;
 		 }
-		System.out.println(rLimit);
-		System.out.println(counter);
 		 return false;
 	}
 
