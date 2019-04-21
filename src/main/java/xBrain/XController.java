@@ -11,9 +11,12 @@ import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -33,6 +36,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utils.Locators;
 
 public class XController implements ITestListener, IAnnotationTransformer{
 
@@ -201,6 +205,38 @@ public class XController implements ITestListener, IAnnotationTransformer{
 				logger.createNode(logMessage + " - validation PASSED");
 			else
 				logger.createNode(logMessage + " - validation FAILED");
+		}
+		
+		public WebElement locateWebElement(Locators locator, String locValue) {
+			try {
+				switch (locator) {
+				case CLASSNAME:
+					return driver.findElement(By.className(locValue));
+				case CSS:
+					return driver.findElement(By.cssSelector(locValue));
+				case ID:
+					return driver.findElement(By.id(locValue));
+				case LINKTEXT:
+					return driver.findElement(By.linkText(locValue.trim()));
+				case NAME:
+					return driver.findElement(By.name(locValue));
+				case XPATH:
+					return driver.findElement(By.xpath(locValue));
+				case PARTIALLINKTEXT:
+					return driver.findElement(By.partialLinkText(locValue));
+				case TAGNAME:
+					return driver.findElement(By.tagName(locValue));
+				default:
+					break;
+				}
+			} catch (NoSuchElementException e) {
+				throw new RuntimeException();
+			}
+			return null;
+		}
+		
+		public String getAttribute(Locators locator, String locatorValue, String attributeName) {
+			return locateWebElement(locator, locatorValue).getAttribute(attributeName);
 		}
 
 	

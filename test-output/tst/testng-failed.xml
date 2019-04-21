@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [tst]">
+  <parameter name="test" value="demo"/>
+  <listeners>
+    <listener class-name="xBrain.XController"/>
+  </listeners>
+  <test thread-count="1" name="TestFramework(failed)">
+    <classes>
+      <class name="testCases.Test001">
+        <methods>
+          <include name="testMe"/>
+        </methods>
+      </class> <!-- testCases.Test001 -->
+    </classes>
+  </test> <!-- TestFramework(failed) -->
+</suite> <!-- Failed suite [tst] -->

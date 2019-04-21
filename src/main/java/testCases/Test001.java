@@ -11,7 +11,7 @@ public class Test001 extends Homepage{
 	public void testMe() {
 		logfailure();
 		Homepage hp = new Homepage();
-		hp.getTitle();
+		Validate("is image alt", hp.getTitle(), "Google");
 		
 	}
 }
