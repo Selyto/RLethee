@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="tst" duration-ms="13455" started-at="2019-04-21T18:27:03Z" finished-at="2019-04-21T18:27:17Z">
+  <suite name="tst" duration-ms="12739" started-at="2019-04-28T17:25:04Z" finished-at="2019-04-28T17:25:16Z">
     <groups>
     </groups>
-    <test name="TestFramework" duration-ms="13455" started-at="2019-04-21T18:27:03Z" finished-at="2019-04-21T18:27:17Z">
+    <test name="TestFramework" duration-ms="12739" started-at="2019-04-28T17:25:04Z" finished-at="2019-04-28T17:25:16Z">
       <class name="testCases.Test001">
-        <test-method status="PASS" signature="testMe()[pri:0, instance:testCases.Test001@1a968a59]" name="testMe" duration-ms="13145" started-at="2019-04-21T18:27:04Z" finished-at="2019-04-21T18:27:17Z">
+        <test-method status="PASS" signature="testMe()[pri:0, instance:testCases.Test001@6a41eaa2]" name="testMe" duration-ms="12544" started-at="2019-04-28T17:25:04Z" finished-at="2019-04-28T17:25:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMe -->

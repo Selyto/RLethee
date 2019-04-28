@@ -4,9 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
+import objectRepository.Homepage;
 import utils.Locators;
 
-public class SeleniumActions extends XController{
+public abstract class SeleniumActions extends XController{
 
 	public WebElement locateWebElement(Locators locator, String locValue) {
 		try {
@@ -54,4 +55,24 @@ public class SeleniumActions extends XController{
 		else
 			logger.createNode(logMessage + " - validation FAILED");
 	}
+	
+	public void Click(WebElement element) {
+		try {
+			element.click();
+		}
+		catch(Exception e) {
+			logger.createNode("Click failed on the element " + element.getText() + " due to " + e.toString());
+			logger.fail("Click failed on the element " + element.getText() + " due to " + e.toString());
+		}
+	}
+	
+	public void TypeIn(WebElement element, String term) {
+		try {
+			element.sendKeys(term);
+			}
+		catch(Exception e) {
+			logger.createNode("Click failed on the element " + element.getText() + " due to " + e.toString());
+		}
+	}
+	
 }

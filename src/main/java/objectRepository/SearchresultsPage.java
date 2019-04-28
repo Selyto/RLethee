@@ -2,19 +2,21 @@ package objectRepository;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utils.Locators;
 import xBrain.SeleniumActions;
+import xBrain.XController;
 
-public class Homepage extends SeleniumActions {
+public class SearchresultsPage extends SeleniumActions {
 
     protected String id="hplogo";
-    protected String btnSearch="btnK";
-    protected String txtSearch="q";
 	
-	public Homepage() {
+	public SearchresultsPage() {
 		Browser().manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
 		WebDriverWait wait = new WebDriverWait(Browser(), 30);
 		wait.until(ExpectedConditions.visibilityOf(locateWebElement(Locators.ID, id)));
@@ -26,12 +28,6 @@ public class Homepage extends SeleniumActions {
 	
 	public void logfailure() {
 		Validate("Verify nmae is similar", true, true);
-	}
-	
-	public SearchresultsPage clicktoSearch(String term) {
-		TypeIn(locateWebElement(Locators.NAME,txtSearch), term);
-		Click(locateWebElement(Locators.NAME,btnSearch));
-		return new SearchresultsPage();
 	}
 	
 	

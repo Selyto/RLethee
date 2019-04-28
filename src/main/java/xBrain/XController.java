@@ -174,7 +174,7 @@ public class XController implements ITestListener, IAnnotationTransformer{
 				PASSWORD = prop.getProperty("password");
 				RETRYCOUNT = Integer.parseInt(prop.getProperty("retryCount"));
 			} catch (FileNotFoundException e) {
-				System.out.println("Configuraton Read Error.");
+				System.out.println("Configuraton File not found.");
 			} catch (IOException e) {
 				System.out.println("Configuraton Read Error.");
 			}
