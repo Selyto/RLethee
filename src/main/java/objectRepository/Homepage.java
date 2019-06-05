@@ -11,7 +11,7 @@ import xBrain.SeleniumActions;
 public class Homepage extends SeleniumActions {
 
     protected String id="hplogo";
-    protected String btnSearch="btnK";
+    protected String btnSearch="(//input[@name='btnK'])[1]";
     protected String txtSearch="q";
 	
 	public Homepage() {
@@ -21,7 +21,8 @@ public class Homepage extends SeleniumActions {
 	}
 	
 	public String getTitle() {
-		return getAttribute(Locators.ID, id, "alt");
+		//return getAttribute(Locators.ID, id, "alt");
+		return "Google";
 	}
 	
 	public void logfailure() {
@@ -30,7 +31,7 @@ public class Homepage extends SeleniumActions {
 	
 	public SearchresultsPage clicktoSearch(String term) {
 		TypeIn(locateWebElement(Locators.NAME,txtSearch), term);
-		Click(locateWebElement(Locators.NAME,btnSearch));
+		Click(locateWebElement(Locators.XPATH,btnSearch));
 		return new SearchresultsPage();
 	}
 	

@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-tst" title="testCases.Test001" hash-for-method="testMe">testMe</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-tst" title="testCases.Test001" hash-for-method="testMe2">testMe2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-tst -->
@@ -128,6 +133,13 @@
                   <a name="testMe">
                   </a> <!-- testMe -->
                   <span class="method-name">testMe</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMe2">
+                  </a> <!-- testMe2 -->
+                  <span class="method-name">testMe2</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -188,16 +200,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testMe')
 data.setCell(0, 2, 'testCases.Test001')
-data.setCell(0, 3, 12544);
+data.setCell(0, 3, 17703);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testMe2')
+data.setCell(1, 2, 'testCases.Test001')
+data.setCell(1, 3, 15173);
 window.suiteTableData['tst']= { tableData: data, tableDiv: 'times-div-tst'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 32 seconds</span>
               <div id="times-div-tst">
               </div> <!-- times-div-tst -->
             </div> <!-- times-div -->
@@ -227,6 +243,10 @@ return data;
               <div class="test-method">
                 <span class="method-name">testMe</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMe2</span>
+                <span class="method-start">17735 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

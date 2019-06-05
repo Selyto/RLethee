@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="tst" duration-ms="12739" started-at="2019-04-28T17:25:04Z" finished-at="2019-04-28T17:25:16Z">
+  <suite name="tst" duration-ms="33616" started-at="2019-06-05T14:09:20Z" finished-at="2019-06-05T14:09:53Z">
     <groups>
     </groups>
-    <test name="TestFramework" duration-ms="12739" started-at="2019-04-28T17:25:04Z" finished-at="2019-04-28T17:25:16Z">
+    <test name="TestFramework" duration-ms="33616" started-at="2019-06-05T14:09:20Z" finished-at="2019-06-05T14:09:53Z">
       <class name="testCases.Test001">
-        <test-method status="PASS" signature="testMe()[pri:0, instance:testCases.Test001@6a41eaa2]" name="testMe" duration-ms="12544" started-at="2019-04-28T17:25:04Z" finished-at="2019-04-28T17:25:16Z">
+        <test-method status="PASS" signature="testMe()[pri:0, instance:testCases.Test001@6a41eaa2]" name="testMe" duration-ms="17703" started-at="2019-06-05T14:09:20Z" finished-at="2019-06-05T14:09:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMe -->
+        <test-method status="PASS" signature="testMe2()[pri:0, instance:testCases.Test001@6a41eaa2]" name="testMe2" duration-ms="15173" started-at="2019-06-05T14:09:38Z" finished-at="2019-06-05T14:09:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMe2 -->
       </class> <!-- testCases.Test001 -->
     </test> <!-- TestFramework -->
   </suite> <!-- tst -->

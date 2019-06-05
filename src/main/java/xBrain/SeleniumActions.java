@@ -9,7 +9,7 @@ import utils.Locators;
 
 public abstract class SeleniumActions extends XController{
 
-	public WebElement locateWebElement(Locators locator, String locValue) {
+	public WebElement locateWebElement( Locators locator, String locValue ) {
 		try {
 			switch (locator) {
 			case CLASSNAME:
@@ -42,21 +42,21 @@ public abstract class SeleniumActions extends XController{
 		return locateWebElement(locator, locatorValue).getAttribute(attributeName);
 	}
 	
-	public void Validate(String logMessage, boolean expectedValue, boolean actualValue) {
+	public void Validate( String logMessage, boolean expectedValue, boolean actualValue ) {
 		if(expectedValue == actualValue)
 			logger.createNode(logMessage + " - validation PASSED");
 		else
 			logger.createNode(logMessage + " - validation FAILED");
 	}
 	
-	public void Validate(String logMessage, String expectedValue, String actualValue) {
+	public void Validate( String logMessage, String expectedValue, String actualValue ) {
 		if(expectedValue.equalsIgnoreCase(actualValue))
 			logger.createNode(logMessage + " - validation PASSED");
 		else
 			logger.createNode(logMessage + " - validation FAILED");
 	}
 	
-	public void Click(WebElement element) {
+	public void Click( WebElement element ) {
 		try {
 			element.click();
 		}
@@ -66,7 +66,17 @@ public abstract class SeleniumActions extends XController{
 		}
 	}
 	
-	public void TypeIn(WebElement element, String term) {
+	public void isDisplayed( WebElement element ) {
+		try {
+			element.isDisplayed();
+		}
+		catch(Exception e) {
+			logger.createNode("Click failed on the element " + element.getText() + " due to " + e.toString());
+			logger.fail("Click failed on the element " + element.getText() + " due to " + e.toString());
+		}
+	}
+	
+	public void TypeIn( WebElement element, String term ) {
 		try {
 			element.sendKeys(term);
 			}

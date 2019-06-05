@@ -14,21 +14,22 @@ import xBrain.XController;
 
 public class SearchresultsPage extends SeleniumActions {
 
-    protected String id="hplogo";
+    protected String id="//div[text()='All']";
 	
 	public SearchresultsPage() {
 		Browser().manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
 		WebDriverWait wait = new WebDriverWait(Browser(), 30);
-		wait.until(ExpectedConditions.visibilityOf(locateWebElement(Locators.ID, id)));
+		wait.until(ExpectedConditions.visibilityOf(locateWebElement(Locators.XPATH, id)));
 	}
 	
 	public String getTitle() {
-		return getAttribute(Locators.ID, id, "alt");
+		return getAttribute(Locators.XPATH, id, "alt");
 	}
 	
 	public void logfailure() {
 		Validate("Verify nmae is similar", true, true);
 	}
+	
 	
 	
 }
