@@ -6,7 +6,8 @@
 <parameter name="test" value="demo"/>
 <test name="TestFramework">
 <classes>
-<class name="testCases.Test001"></class>
+<class name="testCases.Test001">
+</class>
 </classes>
 </test>
 </suite>

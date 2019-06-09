@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-tst">
-              <span class="suite-name border-passed">tst</span>
+              <span class="suite-name border-failed">tst</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-tst" class="hide-methods failed suite-tst"> (hide)</a> <!-- hide-methods failed suite-tst -->
+                      <a href="#" panel-name="suite-tst" class="show-methods failed suite-tst"> (show)</a> <!-- show-methods failed suite-tst -->
+                    </span>
+                    <div class="method-list-content failed suite-tst">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-tst" title="testCases.Test001" hash-for-method="testMe2">testMe2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-tst -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -107,7 +121,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-tst" title="testCases.Test001" hash-for-method="testMe2">testMe2</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-tst" title="testCases.Test001" hash-for-method="testMe0(1.0, raveen, 25.5)">testMe0(1.0, raveen, 25.5)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-tst" title="testCases.Test001" hash-for-method="testMe0(2.0, eee, 24.3)">testMe0(2.0, eee, 24.3)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-tst -->
@@ -122,6 +141,28 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-tst" class="panel tst">
+          <div class="suite-tst-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.Test001</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMe2">
+                  </a> <!-- testMe2 -->
+                  <span class="method-name">testMe2</span>
+                  <div class="stack-trace">java.lang.RuntimeException
+	at xBrain.SeleniumActions.locateWebElement(SeleniumActions.java:45)
+	at objectRepository.SearchresultsPage.&lt;init&gt;(SearchresultsPage.java:22)
+	at objectRepository.Homepage.clicktoSearch(Homepage.java:35)
+	at testCases.Test001.testMe2(Test001.java:37)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-tst-class-failed -->
           <div class="suite-tst-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -137,9 +178,18 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testMe2">
-                  </a> <!-- testMe2 -->
-                  <span class="method-name">testMe2</span>
+                  <a name="testMe0(1.0, raveen, 25.5)">
+                  </a> <!-- testMe0(1.0, raveen, 25.5) -->
+                  <span class="method-name">testMe0</span>
+                  <span class="parameters">(1.0, raveen, 25.5)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMe0(2.0, eee, 24.3)">
+                  </a> <!-- testMe0(2.0, eee, 24.3) -->
+                  <span class="method-name">testMe0</span>
+                  <span class="parameters">(2.0, eee, 24.3)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -200,20 +250,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testMe')
+data.setCell(0, 1, 'testMe2')
 data.setCell(0, 2, 'testCases.Test001')
-data.setCell(0, 3, 17703);
+data.setCell(0, 3, 10521);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testMe2')
+data.setCell(1, 1, 'testMe')
 data.setCell(1, 2, 'testCases.Test001')
-data.setCell(1, 3, 15173);
+data.setCell(1, 3, 10081);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testMe0')
+data.setCell(2, 2, 'testCases.Test001')
+data.setCell(2, 3, 8393);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testMe0')
+data.setCell(3, 2, 'testCases.Test001')
+data.setCell(3, 3, 6134);
 window.suiteTableData['tst']= { tableData: data, tableDiv: 'times-div-tst'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <span class="suite-total-time">Total running time: 35 seconds</span>
               <div id="times-div-tst">
               </div> <!-- times-div-tst -->
             </div> <!-- times-div -->
@@ -245,8 +303,18 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <span class="method-name">testMe0(1.0, raveen, 25.5)</span>
+                <span class="method-start">10524 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMe0(2.0, eee, 24.3)</span>
+                <span class="method-start">18917 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testMe2</span>
-                <span class="method-start">17735 ms</span>
+                <span class="method-start">25054 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

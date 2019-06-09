@@ -9,7 +9,7 @@
     <classes>
       <class name="testCases.Test001">
         <methods>
-          <include name="testMe"/>
+          <include name="testMe2"/>
         </methods>
       </class> <!-- testCases.Test001 -->
     </classes>

@@ -1,17 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="tst" duration-ms="33616" started-at="2019-06-05T14:09:20Z" finished-at="2019-06-05T14:09:53Z">
+  <suite name="tst" duration-ms="35962" started-at="2019-06-09T08:59:08Z" finished-at="2019-06-09T08:59:44Z">
     <groups>
     </groups>
-    <test name="TestFramework" duration-ms="33616" started-at="2019-06-05T14:09:20Z" finished-at="2019-06-05T14:09:53Z">
+    <test name="TestFramework" duration-ms="35962" started-at="2019-06-09T08:59:08Z" finished-at="2019-06-09T08:59:44Z">
       <class name="testCases.Test001">
-        <test-method status="PASS" signature="testMe()[pri:0, instance:testCases.Test001@6a41eaa2]" name="testMe" duration-ms="17703" started-at="2019-06-05T14:09:20Z" finished-at="2019-06-05T14:09:38Z">
+        <test-method status="PASS" signature="testMe()[pri:0, instance:testCases.Test001@7d9d1a19]" name="testMe" duration-ms="10081" started-at="2019-06-09T08:59:08Z" finished-at="2019-06-09T08:59:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMe -->
-        <test-method status="PASS" signature="testMe2()[pri:0, instance:testCases.Test001@6a41eaa2]" name="testMe2" duration-ms="15173" started-at="2019-06-05T14:09:38Z" finished-at="2019-06-05T14:09:53Z">
+        <test-method status="PASS" signature="testMe0(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.Test001@7d9d1a19]" name="testMe0" duration-ms="8393" started-at="2019-06-09T08:59:18Z" data-provider="TC1" finished-at="2019-06-09T08:59:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[raveen]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[25.5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMe0 -->
+        <test-method status="PASS" signature="testMe0(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testCases.Test001@7d9d1a19]" name="testMe0" duration-ms="6134" started-at="2019-06-09T08:59:27Z" data-provider="TC1" finished-at="2019-06-09T08:59:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[eee]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[24.3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMe0 -->
+        <test-method status="FAIL" signature="testMe2()[pri:0, instance:testCases.Test001@7d9d1a19]" name="testMe2" duration-ms="10521" started-at="2019-06-09T08:59:33Z" finished-at="2019-06-09T08:59:43Z">
+          <exception class="java.lang.RuntimeException">
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException
+at xBrain.SeleniumActions.locateWebElement(SeleniumActions.java:45)
+at objectRepository.SearchresultsPage.<init>(SearchresultsPage.java:22)
+at objectRepository.Homepage.clicktoSearch(Homepage.java:35)
+at testCases.Test001.testMe2(Test001.java:37)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMe2 -->

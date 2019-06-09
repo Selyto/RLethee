@@ -9,11 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">tst</th></tr>
-<tr><td><a href="#t0">TestFramework</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">33,616</td><td></td><td></td></tr>
+<tr><td><a href="#t0">TestFramework</a></td><td class="num">3</td><td class="num">0</td><td class="num attn">1</td><td class="num">35,962</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">tst</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestFramework &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testCases.Test001</td><td><a href="#m0">testMe</a></td><td rowspan="1">1559743760983</td><td rowspan="1">17703</td></tr><tr class="passedeven"><td><a href="#m1">testMe2</a></td><td rowspan="1">1559743778718</td><td rowspan="1">15173</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">tst</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestFramework &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.Test001</td><td><a href="#m0">testMe2</a></td><td rowspan="1">1560070773418</td><td rowspan="1">10521</td></tr><tr><th colspan="4">TestFramework &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">testCases.Test001</td><td><a href="#m1">testMe</a></td><td rowspan="1">1560070748364</td><td rowspan="1">10081</td></tr><tr class="passedeven"><td><a href="#m2">testMe0</a></td><td rowspan="2">1560070758888</td><td rowspan="2">8393</td></tr><tr class="passedeven"><td><a href="#m3">testMe0</a></td></tr></tbody>
 </table>
-<h2>TestFramework</h2><h3 id="m0">testCases.Test001#testMe</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testCases.Test001#testMe2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TestFramework</h2><h3 id="m0">testCases.Test001#testMe2</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException
+	at xBrain.SeleniumActions.locateWebElement(SeleniumActions.java:45)
+	at objectRepository.SearchresultsPage.&lt;init&gt;(SearchresultsPage.java:22)
+	at objectRepository.Homepage.clicktoSearch(Homepage.java:35)
+	at testCases.Test001.testMe2(Test001.java:37)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testCases.Test001#testMe</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testCases.Test001#testMe0</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>1.0</td><td>raveen</td><td>25.5</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testCases.Test001#testMe0</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>2.0</td><td>eee</td><td>24.3</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
