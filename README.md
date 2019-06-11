@@ -11,3 +11,21 @@ Build your Testcases inside the testcases package.
 
 Do not extend any pageobject classes to the test case classes. Instead create the objects.
 
++--- ---------+
+| PageObjects |
++-------------+
+obj1+ -> m1()
+    |
+    + -> m2()
+    |
+    + -> m3() => obj2
+
++----------+
+| TestCases|
++----------+
+    T1
+-----------
+obj1.m1();
+obj1.m2();
+obj2 = obj1.m3();
+
