@@ -20,11 +20,11 @@ The below is the sample usage of the PageObjects and TestCases
 | PageObjects |
 +-------------+
 
-obj1 --> m1()
-    |
-     --> m2()
-    | 
-     --> m3() => obj2
+obj1 +--> m1()
+     |
+     +--> m2()
+     | 
+     +--> m3() => obj2
 +------------+
 |  TestCases |
 +--+----+----+
@@ -35,6 +35,3 @@ obj1.m1();
 obj1.m2();
 obj2 = obj1.m3();
 ```
-
-
-
